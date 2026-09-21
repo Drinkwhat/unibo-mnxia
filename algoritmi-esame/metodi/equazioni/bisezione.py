@@ -32,10 +32,10 @@ def metodo_bisezione(fname, a, b, tolx,tolf):
             if np.abs(fxk)<tolf:
               return xk, it, np.array(v_xk)
         
-            if np.sign(fa) * np.sign(xk) < 0:   # TODO: Teorema dei segni con il punto a sx    #la radice si trova nell'intervallo [a, xk].
+            if np.sign(fa) * np.sign(fxk) < 0:   # TODO: Teorema dei segni con il punto a sx    #la radice si trova nell'intervallo [a, xk].
               b = xk
               fb = fxk
-            elif np.sign(fb) * np.sign(xk) < 0: # TODO: Teorema dei segni con il punto a dx  #la radice si trova nell'intervallo [xk, b].
+            elif np.sign(fxk) * np.sign(fb) < 0: # TODO: Teorema dei segni con il punto a dx  #la radice si trova nell'intervallo [xk, b].
               a = xk
               fa = fxk
         
