@@ -22,7 +22,7 @@ def metodo_bisezione(fname, a, b, tolx,tolf):
      it = 0
      v_xk = []
     
-     max_it=int(np.ceil(np.log2((b - a) / tolx))) -1
+     max_it=int(np.ceil(np.log2((b - a) / tolx)))
      print("Max_It ",max_it)
      while abs(b - a) > tolx and it < max_it: # TODO : 
             xk = a + (b - a) / 2 # TODO: Formula del punto medio 
