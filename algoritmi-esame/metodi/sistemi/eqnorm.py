@@ -21,8 +21,9 @@ def eqnorm(A: np.matrix, b: np.typing.ArrayLike):
     lt = l.T # TODO
 
     z, flag = st.Lsolve(l, f) # TODO
+    if flag != 0:
+        return [], flag
 
-    if flag == 0: # TODO
-        x, flag = st.Usolve(lt, z) # TODO
+    x, flag = st.Usolve(lt, z) # TODO
 
     return x
