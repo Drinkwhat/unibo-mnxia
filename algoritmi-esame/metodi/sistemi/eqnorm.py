@@ -21,6 +21,8 @@ def eqnorm(A: np.matrix, b: np.typing.ArrayLike):
     lt = l.T # TODO
 
     z, flag = st.Lsolve(l, f) # TODO
+    # Deviazione voluta rispetto al codice del corso: il docente qui non controlla
+    # flag e va in NameError su x se Lsolve fallisce; si preferisce propagare l'errore.
     if flag != 0:
         return [], flag
 
