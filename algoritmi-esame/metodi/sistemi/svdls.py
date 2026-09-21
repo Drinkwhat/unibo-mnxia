@@ -59,7 +59,7 @@ def SVDLS(A, b):
     c = d1 / s1 #to do 
 
     
-    x = V[:,:k] * c #to do 
+    x = V[:, :k] @ c
 
     
     residuo = np.linalg.norm(d[k:]) ** 2 #to do 
