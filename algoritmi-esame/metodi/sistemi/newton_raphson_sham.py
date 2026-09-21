@@ -17,7 +17,7 @@ def newton_raphson_sham(initial_guess,F_numerical, J_numerical, tolX, tolF, upda
     errore = []
 
     # 
-    while erroreX >= tolX and erroreF >= tolF and it < max_iterations: #to do 
+    while it < max_iterations and erroreF > tolF and erroreX > tolX: #to do
         
         if it % update == 0:
             jx = np.array(J_numerical(X[0], X[1]), dtype=float) # TODO: Jacobiana

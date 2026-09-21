@@ -25,7 +25,7 @@ def newton_raphson_corde(initial_guess, F_numerical, J_numerical, tolX, tolF, ma
         return None, None, None
             
     # Ciclo iterativo
-    while it < max_iterations and erroreF >= tolF and erroreX >= tolX: # TODO
+    while it < max_iterations and erroreF > tolF and erroreX > tolX: # TODO
 
         # Valutazione della funzione nel punto corrente
         fx = np.array(F_numerical(X[0], X[1]), dtype=float).squeeze()
