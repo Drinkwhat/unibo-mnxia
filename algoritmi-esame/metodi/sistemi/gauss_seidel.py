@@ -25,7 +25,7 @@ def gauss_seidel(A,b,x0,toll,it_max):   # Definisce la funzione che implementa i
 
     er_vet=[]                           # Lista per salvare l'errore a ogni iterazione
 
-    while errore >= toll and it < it_max: #to do  
+    while it<=it_max and errore>=toll: #to do
 
         
 

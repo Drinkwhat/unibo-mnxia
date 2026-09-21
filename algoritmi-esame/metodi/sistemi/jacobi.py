@@ -24,7 +24,7 @@ def jacobi(A,b,x0,toll,it_max):          # Definisce una funzione che applica il
 
     er_vet=[]                           # Crea una lista vuota per salvare gli errori a ogni iterazione
 
-    while errore >= toll and it < it_max: # TODO
+    while it<=it_max and errore>=toll: # TODO
 
         x = (b + N @ x0) / d.reshape(n, 1) # TODO       # Calcola la nuova approssimazione x con la formula di Jacobi
     
